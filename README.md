@@ -13,7 +13,7 @@ Optional flags (defaults shown):
 
 ```bash
 python compas.py \
-    --csv data/compas-scores-two-years.csv \
+    --csv compas-scores-two-years.csv \
     --epochs 60 \
     --batch 256 \
     --seed 0 \
@@ -23,14 +23,14 @@ python compas.py \
 04. To get the results on Adult dataset. Run adult.py with arguments as follows:
 
 ```bash
-python adult.py --csv data/adult_reconstruction.csv
+python adult.py --csv adult_reconstruction.csv
 ```
 
 Same flag set, but the defaults are different (Adult is a larger dataset):
 
 ```bash
 python adult.py \
-    --csv data/adult_reconstruction.csv \
+    --csv adult_reconstruction.csv \
     --epochs 100 \
     --batch 128 \
     --seed 0 \
