@@ -48,16 +48,24 @@ python adult.py \
   fair-attack).
 Note that in the output plot the adv+fair plot is the EOd / accuracy under fairness adversarial training.
 
-### Software
+# Software
 
-| Package        | Version  | Purpose                          |
-| -------------- | -------- | -------------------------------- |
-| Python         | 3.10.12  | Interpreter                      |
-| PyTorch        | 2.2.1    | Model definition & training      |
-| torchvision    | 0.17.1   | (Pulled in with PyTorch)         |
-| NumPy          | 1.26.4   | Numerical arrays                 |
-| pandas         | 2.2.1    | CSV loading & one-hot encoding   |
-| scikit-learn   | 1.4.1    | StandardScaler, train/test split |
-| matplotlib     | 3.8.3    | Result plots                     |
-| CUDA Toolkit   | 11.8     | (Optional) GPU acceleration      |
+| Package        | Version  | 
+| -------------- | -------- | 
+| Python         | 3.10.12  | 
+| PyTorch        | 2.2.1    | 
+| torchvision    | 0.17.1   | 
+| NumPy          | 1.26.4   |
+| pandas         | 2.2.1    | 
+| scikit-learn   | 1.4.1    | 
+| matplotlib     | 3.8.3    |
+| CUDA Toolkit   | 11.8     |
+
+# Citation 
+
+Code repository is forked from the original implementation of the paper "On the Alignment between Fairness and Accuracy: from the Perspective of Adversarial Robustness", published in ICML 2026. Please refer the original code repository: https://github.com/cjy24/fair-adversarial-training
+
+# Contact
+
+For questions or concerns please contact at: abdullaharafat.miah@uri.edu
 
