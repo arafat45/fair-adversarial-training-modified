@@ -45,7 +45,7 @@ python adult.py \
 * `compas_attacks.png` / `adult_attacks.png` —  3×2 grid: rows = attack
   (PGD / NES / Transfer), columns = (accuracy under acc-attack, EOd under
   fair-attack).
-Note that in the output plot the adv+fair plot is the EOd / accuracy under fairness adversarial training.
+Note that in the output plot the adv+fair plot is the EOd / accuracy under fairness adversarial training (in processing).
 
 # Software
 
