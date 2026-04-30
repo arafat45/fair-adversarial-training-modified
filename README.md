@@ -1,9 +1,14 @@
-# Modified version of the codes of the paper 'On the Alignment between Fairness and Accuracy: from the Perspective of Adversarial Robustness'.
+# Modified implementation of *"On the Alignment between Fairness and Accuracy: From the Perspective of Adversarial Robustness"*, extended with NES and Transfer black-box attacks alongside the paper's original PGD attack.
 
 While numerous work has been proposed to address fairness in machine learning, existing methods do not guarantee fair predictions under imperceptible feature perturbation, and a seemingly fair model can suffer from large group-wise disparities under such perturbation. Moreover, while adversarial training has been shown to be reliable in improving a model’s robustness to defend against adversarial feature perturbation that deteriorates accuracy, it has not been properly studied in the context of adversarial perturbation against fairness. To tackle these challenges, in this paper, we study the problem of adversarial attack and adversarial robustness w.r.t. two terms: fairness and accuracy. From the adversarial attack perspective, we propose a unified structure for adversarial attacks against fairness which brings together common notions in group fairness, and we theoretically prove the equivalence of adversarial attacks against different fairness notions. Further, we derive the connections between adversarial attacks against fairness and those against accuracy. From the adversarial robustness perspective, we theoretically align robustness to adversarial attacks against fairness and accuracy, where robustness w.r.t. one term enhances robustness w.r.t. the other term. Our study suggests a novel way to unify adversarial training w.r.t. fairness and accuracy, and experiments show our proposed method achieves better robustness w.r.t. both terms.
 
-# Configuration
- Please install all necessary packages via: pip install -r requirements.txt
+# Step by Step Guide
+01. Please install all necessary packages via: pip install -r requirements.txt
+02. The required datasets: COMPAS and Adult are already in the repository. Keep them in the repository.
+03. Run COMPAS
+   ```bash
+python compas.py --csv data/compas-scores-two-years.csv
+``` 
 
  #  Usage
  The example contains experiments on COMPAS   dataset. To run the experiments, please revise the file directory accordingly.
