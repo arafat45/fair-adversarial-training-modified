@@ -5,10 +5,59 @@ While numerous work has been proposed to address fairness in machine learning, e
 # Step by Step Guide
 01. Please install all necessary packages via: pip install -r requirements.txt
 02. The required datasets: COMPAS and Adult are already in the repository. Keep them in the repository.
-03. Run COMPAS
+03. To get the results on COMPAS dataset. Run compas.py with arguments as follows:
    ```bash
-python compas.py --csv data/compas-scores-two-years.csv
-``` 
+python compas.py --csv compas-scores-two-years.csv
+```
+Optional flags (defaults shown):
 
- #  Usage
- The example contains experiments on COMPAS   dataset. To run the experiments, please revise the file directory accordingly.
+```bash
+python compas.py \
+    --csv data/compas-scores-two-years.csv \
+    --epochs 60 \
+    --batch 256 \
+    --seed 0 \
+    --out compas_results.png \
+    --out-attacks compas_attacks.png
+```
+04. To get the results on Adult dataset. Run adult.py with arguments as follows:
+
+```bash
+python adult.py --csv data/adult_reconstruction.csv
+```
+
+Same flag set, but the defaults are different (Adult is a larger dataset):
+
+```bash
+python adult.py \
+    --csv data/adult_reconstruction.csv \
+    --epochs 100 \
+    --batch 128 \
+    --seed 0 \
+    --out adult_results.png \
+    --out-attacks adult_attacks.png
+```
+
+05. Reading the outputs:
+
+* `compas_results.png` / `adult_results.png` — 
+  left = accuracy under PGD-acc, right = EOd under PGD-fair. 
+* `compas_attacks.png` / `adult_attacks.png` —
+* 3×2 grid: rows = attack
+  (PGD / NES / Transfer), columns = (accuracy under acc-attack, EOd under
+  fair-attack).
+Note that in the output plot the adv+fair plot is the EOd / accuracy under fairness adversarial training.
+
+### Software
+
+| Package        | Version  | Purpose                          |
+| -------------- | -------- | -------------------------------- |
+| Python         | 3.10.12  | Interpreter                      |
+| PyTorch        | 2.2.1    | Model definition & training      |
+| torchvision    | 0.17.1   | (Pulled in with PyTorch)         |
+| NumPy          | 1.26.4   | Numerical arrays                 |
+| pandas         | 2.2.1    | CSV loading & one-hot encoding   |
+| scikit-learn   | 1.4.1    | StandardScaler, train/test split |
+| matplotlib     | 3.8.3    | Result plots                     |
+| CUDA Toolkit   | 11.8     | (Optional) GPU acceleration      |
+
